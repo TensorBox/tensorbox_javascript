@@ -2,7 +2,7 @@
 
 var axios = require("axios");
 
-const BACKEND_URL = "api.tensorbox.ai"
+const BACKEND_URL = "https://api.tensorbox.ai"
 const GET_PREDICTION_URL = "/api/get_prediction"
 
 class Tensorbox {
@@ -15,6 +15,7 @@ class Tensorbox {
             throw "API key is not defined"
         } 
 
+	param_dict['uid'] = this.api_key;
         const {data} = await axios({
             method: 'post',
             url: BACKEND_URL + GET_PREDICTION_URL,
