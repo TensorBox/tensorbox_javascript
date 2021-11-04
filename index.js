@@ -15,7 +15,7 @@ class Tensorbox {
             throw "API key is not defined"
         } 
 
-	param_dict['uid'] = this.api_key;
+	param_dict['api_key'] = this.api_key;
         const {data} = await axios({
             method: 'post',
             url: BACKEND_URL + GET_PREDICTION_URL,
