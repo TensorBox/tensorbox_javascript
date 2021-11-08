@@ -3,7 +3,7 @@
 var axios = require("axios");
 
 const BACKEND_URL = "https://api.tensorbox.ai"
-const GET_PREDICTION_URL = "/generate"
+const GET_PREDICTION_URL = "/api/generate"
 
 class Tensorbox {
     constructor(api_key) {
